@@ -1,0 +1,25 @@
+<div
+  class="w-full flex flex-col gap-2 text-[20px]"
+  [class.error]="classError()"
+>
+  <div class="flex items-center justify-between">
+    <label for="{{ id }}" class="{{ labelClass }}">{{ label }}</label>
+    @if (showErrorMessage()) {
+    <div class="">
+      <small class="text-red-600 errorMessage">{{ errorMessage }}</small>
+    </div>
+    }
+  </div>
+  <input
+    [type]="type"
+    [formControl]="control"
+    [id]="id"
+    [placeholder]="placeholder"
+    class="border  border-gray-300 focus:outline-none p-[10px] rounded-[8px] font-normal text-[14px] {{
+      class
+    }}"
+    [max]="maxDate"
+    (keydown)="preventLeadingSpace($event)"
+  />
+  <span class="input-field mt-2 mb-2"></span>
+</div>

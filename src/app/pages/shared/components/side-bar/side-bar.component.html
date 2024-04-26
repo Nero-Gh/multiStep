@@ -1,0 +1,67 @@
+<div class="sidebar">
+  <img src="assets/bg-sidebar-desktop.svg" class="h-full" alt="" />
+  <div
+    class="absolute z-20 top-10 left-7 flex flex-col gap-4 items-center justify-start"
+  >
+    @if(stepOne){
+    <div class="flex gap-4 items-center">
+      <div>
+        <div
+          class="border border-white rounded-full w-8 h-8 flex justify-center items-center text-white"
+        >
+          <span>{{ stepOne }}</span>
+        </div>
+      </div>
+      <div>
+        <p class="text-sm uppercase text-coolGray">Step {{ stepOne }}</p>
+        <p class="-mt-2 uppercase text-white font-medium">{{ stepOneInfo }}</p>
+      </div>
+    </div>
+    } @if(stepTwo){
+
+    <div class="flex gap-4 items-center">
+      <div>
+        <div
+          class="border border-white rounded-full w-8 h-8 flex justify-center items-center text-white"
+        >
+          <span>{{ stepTwo }}</span>
+        </div>
+      </div>
+      <div>
+        <p class="text-sm uppercase text-coolGray">Step {{ stepTwo }}</p>
+        <p class="-mt-2 uppercase text-white font-medium">{{ info }}</p>
+      </div>
+    </div>
+    }@if(stepThree){
+
+    <div class="flex gap-4 items-center">
+      <div>
+        <div
+          class="border border-white rounded-full w-8 h-8 flex justify-center items-center text-white"
+        >
+          <span>{{ stepThree }}</span>
+        </div>
+      </div>
+      <div>
+        <p class="text-sm uppercase text-coolGray">Step {{ stepThree }}</p>
+        <p class="-mt-2 uppercase text-white font-medium">{{ info }}</p>
+      </div>
+    </div>
+    }@if(Last){
+
+    <div class="flex gap-4 items-center">
+      <div>
+        <div
+          class="border border-white rounded-full w-8 h-8 flex justify-center items-center text-white"
+        >
+          <span>{{ Last }}</span>
+        </div>
+      </div>
+      <div>
+        <p class="text-sm uppercase text-coolGray">Step {{ Last }}</p>
+        <p class="-mt-2 uppercase text-white font-medium">{{ LastInfo }}</p>
+      </div>
+    </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="container flex items-center">
+  <div class="wrapper flex gap-24 px-5 w-full h-full">
+    <div class="sidebar w-[30%] relative h-full mt-2 py-2">
+      <app-side-bar [label]="'1'" [info]="'Your Info'"></app-side-bar>
+    </div>
+
+    <div class="main flex-1">
+      <div class="main-top mt-10">
+        <h1 class="text-3xl font-bold text-primary mb-1">Select your plan</h1>
+        <p class="text-sm text-coolGray">
+          You have the option of monthly or yearly billing
+        </p>
+      </div>
+      <div class="main-bottom mt-4 text-primary font-medium">
+        <form [formGroup]="multiStepForm">
+          <div class="card flex flex-col">
+            <div
+              class="border h-[130px] w-[110px] rounded-[12px] flex flex-col"
+            >
+              <img src="assets/icon-arcade.svg" alt="" class="w-8 h-8" />
+              <div class="flex flex-col items-center justify-center">
+                <p class="text-[14px] font-medium">Arcade</p>
+                <div class="flex">
+                  <p class="text-[14px] font-medium">$9/mo</p>
+                  <p class="text-[14px] font-medium">2</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-end -mt-5">
+            <app-button
+              [label]="'Next Step'"
+              [type]="'button'"
+              (click)="nextStep()"
+              [class]="
+                'w-[100px] p-2 mt-4 text-white text-sm bg-primary rounded-[8px] hover:bg-secondary hover:scale-[1.01] focus:outline-none'
+              "
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
