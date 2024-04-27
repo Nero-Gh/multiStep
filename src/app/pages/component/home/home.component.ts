@@ -4,17 +4,11 @@ import { Router } from '@angular/router';
 import { MultiStepFormService } from '@app/pages/services/mutiStepForm/multi-step-form.service';
 import { ButtonComponent } from '@app/pages/shared/components/button/button.component';
 import { InputsComponent } from '@app/pages/shared/components/inputs/inputs.component';
-import { SideBarComponent } from '@app/pages/shared/components/side-bar/side-bar.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [
-    InputsComponent,
-    ButtonComponent,
-    ReactiveFormsModule,
-    SideBarComponent,
-  ],
+  imports: [InputsComponent, ButtonComponent, ReactiveFormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
