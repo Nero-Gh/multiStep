@@ -1,0 +1,112 @@
+<div class="container flex items-center">
+  <div class="wrapper flex gap-24 px-5 w-full h-full">
+    <div class="sidebar w-[30%] relative h-full mt-2 py-2">
+      <img src="assets/bg-sidebar-desktop.svg" class="h-full" alt="" />
+      <div
+        class="absolute z-20 top-10 left-7 flex flex-col gap-4 items-start justify-start"
+      >
+        <div class="flex gap-4 items-center">
+          <div>
+            <div
+              class="border border-white rounded-full w-8 h-8 flex justify-center items-center text-white"
+            >
+              <span>1</span>
+            </div>
+          </div>
+          <div>
+            <p class="text-sm uppercase text-coolGray">Step 1</p>
+            <p class="-mt-2 uppercase text-white font-medium">Your Info</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-center">
+          <div>
+            <div
+              class="rounded-full w-8 h-8 flex justify-center items-center bg-light text-black"
+            >
+              <span>2</span>
+            </div>
+          </div>
+          <div>
+            <p class="text-sm uppercase text-coolGray">Step 2</p>
+            <p class="-mt-2 uppercase text-white font-medium">Select plan</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="main-top mt-10">
+        <h1 class="text-3xl font-bold text-primary mb-1">Select your plan</h1>
+        <p class="text-sm text-coolGray">
+          You have the option of monthly or yearly billing
+        </p>
+      </div>
+      <div class="main-bottom mt-4 text-primary font-medium">
+        <form [formGroup]="multiStepForm">
+          <div class="flex gap-4">
+            <div class="card flex flex-col">
+              <div
+                class="border h-[130px] w-[110px] rounded-[12px] flex flex-col gap-9 py-2 px-3"
+              >
+                <img src="assets/icon-arcade.svg" alt="" class="w-8 h-8" />
+                <div class="flex flex-col items-start">
+                  <p class="text-sm font-medium">Arcade</p>
+                  <div class="flex text-[11px] text-coolGray">
+                    <p class="font-medium">$9/mo</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card flex flex-col">
+              <div
+                class="border h-[130px] w-[110px] rounded-[12px] flex flex-col gap-10 pt-2 px-3"
+              >
+                <img src="assets/icon-advanced.svg" alt="" class="w-8 h-8" />
+                <div class="flex flex-col items-start">
+                  <p class="text-sm font-medium">Arcade</p>
+                  <div class="flex text-[11px] text-coolGray">
+                    <p class="font-medium">$9/mo</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card flex flex-col">
+              <div
+                class="border h-[130px] w-[110px] rounded-[12px] flex flex-col gap-10 py-2 px-3"
+              >
+                <img src="assets/icon-pro.svg" alt="" class="w-8 h-8" />
+                <div class="flex flex-col items-start">
+                  <p class="text-sm font-medium">Arcade</p>
+                  <div class="flex text-[11px] text-coolGray">
+                    <p class="font-medium">$9/mo</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-7">
+            <div
+              class="capitalize w-full bg-gray-100 py-2 rounded-lg flex justify-center gap-5 text-[13px]"
+            >
+              <span>monthly</span><input type="checkbox" />
+              <span class="text-coolGray">yearly</span>
+            </div>
+          </div>
+          <div class="flex justify-between items-center mt-20">
+            <a (click)="goBack()" class="text-coolGray text-[14px] mt-5">
+              Go Back
+            </a>
+            <app-button
+              [label]="'Next Step'"
+              [type]="'button'"
+              (click)="nextStep()"
+              [class]="
+                'w-[100px] p-2 mt-4 text-white text-sm bg-primary rounded-[8px] hover:bg-secondary hover:scale-[1.01] focus:outline-none'
+              "
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

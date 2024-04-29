@@ -3,3 +3,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  /* Colors */
+
+  --primary-color: hsl(213, 96%, 18%);
+  --secondary-color: hsl(243, 100%, 62%);
+  ---third-color: hsl(228, 100%, 84%);
+  --light-color: hsl(206, 94%, 87%);
+  --strawberry-color: hsl(354, 84%, 57%);
+  --font-family: "Nunito Sans", sans-serif;
+
+  --cool-gray: hsl(231, 11%, 63%);
+  --light-gray: hsl(229, 24%, 87%);
+  --magnolia: hsl(217, 100%, 97%);
+  --alabaster: hsl(231, 100%, 99%);
+  --white: hsl(0, 0%, 100%);
+}
+
+html {
+  background-color: var(--light-gray);
+}

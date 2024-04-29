@@ -1,0 +1,119 @@
+<div class="container flex items-center">
+  <div class="wrapper flex gap-24 px-5 w-full h-full">
+    <div class="sidebar w-[30%] relative h-full mt-2 py-2">
+      <img src="assets/bg-sidebar-desktop.svg" class="h-full" alt="" />
+      <div
+        class="absolute z-20 top-10 left-7 flex flex-col gap-4 items-start justify-start"
+      >
+        <div class="flex gap-4 items-center">
+          <div>
+            <div
+              class="border border-white rounded-full w-8 h-8 flex justify-center items-center text-white"
+            >
+              <span>1</span>
+            </div>
+          </div>
+          <div>
+            <p class="text-sm uppercase text-coolGray">Step 1</p>
+            <p class="-mt-2 uppercase text-white font-medium">Your Info</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-center">
+          <div>
+            <div
+              class="border border-white rounded-full w-8 h-8 flex justify-center items-center text-white"
+            >
+              <span>2</span>
+            </div>
+          </div>
+          <div>
+            <p class="text-sm uppercase text-coolGray">Step 2</p>
+            <p class="-mt-2 uppercase text-white font-medium">Select Plan</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-center">
+          <div>
+            <div
+              class="rounded-full w-8 h-8 flex justify-center items-center bg-light text-black"
+            >
+              <span>3</span>
+            </div>
+          </div>
+          <div>
+            <p class="text-sm uppercase text-coolGray">Step 3</p>
+            <p class="-mt-2 uppercase text-white font-medium">Add-ons</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main flex-1 mr-10">
+      <div class="main-top mt-10">
+        <h1 class="text-3xl font-bold text-primary mb-1">Pick add-ons</h1>
+        <p class="text-sm text-coolGray">
+          Add-ons help enhance your gaming experience
+        </p>
+      </div>
+      <div class="main-bottom mt-4 text-primary font-medium">
+        <form [formGroup]="multiStepForm">
+          <div class="flex flex-col gap-3">
+            <div
+              class="flex items-center border w-full p-4 rounded-[8px] gap-5"
+            >
+              <input type="checkbox" />
+              <div>
+                <p class="text-sm font-medium">Online service</p>
+                <p class="text-sm text-coolGray">Access to multiplayer games</p>
+              </div>
+
+              <p
+                class="text-coolGray text-secondary text-[12px] flex-1 text-right"
+              >
+                +$1/mo
+              </p>
+            </div>
+            <div class="flex border w-full p-4 rounded-[8px] gap-5">
+              <input type="checkbox" />
+              <div>
+                <p class="text-sm font-medium">Larger Storage</p>
+                <p class="text-sm text-coolGray">Extra 1TB of cloud save</p>
+              </div>
+              <p
+                class="text-coolGray text-secondary text-[12px] flex-1 text-right"
+              >
+                +$2/mo
+              </p>
+            </div>
+            <div class="flex border w-full p-4 rounded-[8px] gap-5">
+              <input type="checkbox" />
+              <div>
+                <p class="text-sm font-medium">Customizable profile</p>
+                <p class="text-sm text-coolGray">
+                  Custom theme on your profile
+                </p>
+              </div>
+              <p
+                class="text-coolGray text-secondary text-[12px] flex-1 text-right"
+              >
+                +$2/mo
+              </p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center mt-10">
+            <a (click)="goBack()" class="text-coolGray text-[14px] mt-5">
+              Go Back
+            </a>
+            <app-button
+              [label]="'Next Step'"
+              [type]="'button'"
+              (click)="nextStep()"
+              [class]="
+                'w-[100px] p-2 mt-4 text-white text-sm bg-primary rounded-[8px] hover:bg-secondary hover:scale-[1.01] focus:outline-none'
+              "
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
