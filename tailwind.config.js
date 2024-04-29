@@ -7,7 +7,7 @@ module.exports = {
         primary: "hsl(213, 96%, 18%)",
         secondary: "hsl(243, 100%, 62%)",
         third: "var(--third-color)",
-        light: "var(--light-color)",
+        light: "hsl(206, 94%, 87%)",
         strawberry: "var(--strawberry-color)",
         coolGray: "var(--cool-gray)",
         lightGray: "var(--light-gray)",

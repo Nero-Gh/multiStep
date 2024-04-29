@@ -6,13 +6,13 @@ import { ButtonComponent } from '@app/pages/shared/components/button/button.comp
 import { InputsComponent } from '@app/pages/shared/components/inputs/inputs.component';
 
 @Component({
-  selector: 'app-select-plan',
+  selector: 'app-summery',
   standalone: true,
   imports: [InputsComponent, ButtonComponent, ReactiveFormsModule],
-  templateUrl: './select-plan.component.html',
-  styleUrl: './select-plan.component.css',
+  templateUrl: './summery.component.html',
+  styleUrl: './summery.component.css',
 })
-export class SelectPlanComponent {
+export class SummeryComponent {
   multiStepForm!: FormGroup;
   multiStepFormService = inject(MultiStepFormService);
   router = inject(Router);
@@ -28,7 +28,7 @@ export class SelectPlanComponent {
     //   this.multiStepForm.value.phone
     // ) {
     this.multiStepFormService.multiStepForm = this.multiStepForm;
-    this.router.navigate(['add-ons']);
+
     // }
     // else {
     //   alert('Please fill all the fields');
@@ -36,6 +36,6 @@ export class SelectPlanComponent {
   }
 
   goBack() {
-    this.router.navigate(['/']);
+    this.router.navigate(['add-ons']);
   }
 }
